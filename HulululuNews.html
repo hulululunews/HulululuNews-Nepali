@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HulululuNews Nepali</title>
+    <style>
+        /* Navigation Bar */
+        nav {
+            width: 100%;
+            background-color: #555;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Pages */
+        .page {
+            padding: 20px;
+        }
+
+        .privacy-policy, .terms-and-conditions, .about-us {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#privacy-policy" class="privacy-policy-link">Privacy Policy</a>
+        <a href="#terms-and-conditions" class="terms-and-conditions-link">Terms & Conditions</a>
+        <a href="#about-us" class="about-us-link">About Us</a>
+    </nav>
+
+    <!-- Pages -->
+    <div id="home" class="page">
+        <h1>Welcome to HulululuNews Nepali</h1>
+        <p>This is the home page.</p>
+    </div>
+
+    <div id="privacy-policy" class="page privacy-policy">
+        <h1>Privacy Policy</h1>
+        <p>Your privacy is important to us. We will not share your information with any third parties.</p>
+    </div>
+
+    <div id="terms-and-conditions" class="page terms-and-conditions">
+        <h1>Terms & Conditions</h1>
+        <p>By using this website, you agree to our terms and conditions.</p>
+    </div>
+
+    <div id="about-us" class="page about-us">
+        <h1>About Us</h1>
+        <p>We are a news website dedicated to providing news from Nepal.</p>
+    </div>
+
+    <script>
+        // Show/hide pages when clicking on navigation links
+        document.querySelector('.privacy-policy-link').addEventListener('click', function() {
+            document.querySelector('.page').style.display = 'none';
+            document.querySelector('.privacy-policy').style.display = 'block';
+        });
+
+        document.querySelector('.terms-and-conditions-link').addEventListener('click', function() {
+            document.querySelector('.page').style.display = 'none';
+            document.querySelector('.terms-and-conditions').style.display = 'block';
+        });
+
+        document.querySelector('.about-us-link').addEventListener('click', function() {
+            document.querySelector('.page').style.display = 'none';
+            document.querySelector('.about-us').style.display = 'block';
+        });
+
+        // Hide all pages except home on load
+        document.querySelector('.page').style.display = 'none';
+        document.querySelector('.home').style.display = 'block';
+    </script>
+
+</body>
+</html>
